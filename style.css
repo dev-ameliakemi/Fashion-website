@@ -49,16 +49,44 @@ li a:focus {
 
 .hero {
     position: relative;
-    height: 300px;
+    height: 80vh;
+    background-color: rgb(255, 252, 246);
 }
 
 .hero img {
-    width: 100%;
+    width: 50%;
     height: 100%;
     object-fit: cover;
     object-position: center top;
     display: block;
+    
 }
+
+
+.header-content {
+    position: absolute;
+    top: 50%;
+    left: 72%;
+    transform: translate(-50%, -50%);
+    color: rgb(20, 12, 1);
+    white-space: nowrap;
+}
+
+.header-content p {
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.header-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 0.5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
 
 .container {
     width: 100%;
@@ -67,47 +95,54 @@ li a:focus {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    align-items: center;
     flex-flow: row wrap;
-    align-content: space-evenly;
+    align-items: stretch;
 } 
 
 .card {
-    height: auto;
-    background-color: rgb(248, 247, 247);
-    display: block;
+    width: 300px;
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     border-radius: 8px;
-    padding: 0.6rem;
-    flex: 0 1 auto;
-
+    overflow: hidden;
+    background-color: rgb(248, 247, 247);
+    
 }
+
+.card figure {
+    margin: 0;
+    height: 350px;
+    
+}
+
+.card figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; 
+    object-position: center top;
+}
+
+.card h4, .card p {
+    padding: 0.5rem 1rem;
+}
+
 
 .popular-section .card {
     background-color: rgb(255, 253, 249);
 }
 
-.header-content {
-    position: absolute;
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-    color: rgb(20, 12, 1);
-}
 
-.header-content p {
-    font-size: 1rem;
+.collections-section 
+h1
+{
+    text-transform: uppercase;
     letter-spacing: 2px;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    
 }
 
-.header-content h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin: 0.5rem 0;
-    padding-left: 2rem;
-}
 
 .footer-content h3 {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -154,4 +189,12 @@ li a:focus {
 
     font-weight: 500;
     font-size: medium;
+}
+
+.footer-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
