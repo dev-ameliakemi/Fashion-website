@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap");
 
 body {
-    margin: 0;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h1,
@@ -11,256 +11,305 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Host Grotesk", sans-serif;
-
+  font-family: "Host Grotesk", sans-serif;
 }
 
 nav {
-    background-color: rgb(30, 30, 28);
-    padding: 1rem;
-    margin-top: 0rem;
+  background-color: rgb(30, 30, 28);
+  padding: 1rem;
+  margin-top: 0rem;
 }
 
 nav ul {
-    list-style-type: none;
-    text-align: left;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-around;
-    font-weight: 500;
-    font-size: medium;
+  list-style-type: none;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  font-weight: 500;
+  font-size: medium;
 }
 
 nav ul li {
-    display: inline-block;
+  display: inline-block;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: rgb(197, 197, 197);
+  text-decoration: none;
+  color: rgb(197, 197, 197);
 }
 
 li a:hover,
 li a:focus {
-    text-decoration: underline;
-    color: bisque;
+  text-decoration: underline;
+  color: rgb(255, 133, 182);
 }
 
 .hero {
-    position: relative;
-    height: 80vh;
-    background-color:  rgb(248, 247, 247);
+  position: relative;
+  height: 80vh;
+  background-color: rgb(248, 247, 247);
 }
 
 .hero img {
-    width: 50%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    display: block;
-    
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
-
 .header-content {
-    position: absolute;
-    top: 50%;
-    left: 72%;
-    transform: translate(-50%, -50%);
-    color: rgb(20, 12, 1);
-    white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  left: 72%;
+  transform: translate(-50%, -50%);
+  color: rgb(20, 12, 1);
+  white-space: nowrap;
 }
 
 .header-content p {
-    font-size: 0.85rem;
-    letter-spacing: 4px;
-    text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }
 
 .header-content h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin: 0.5rem 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-
 .container {
-    width: 100%;
-    height: auto;
-    margin-inline: auto;
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    flex-flow: row wrap;
-    align-items: stretch;
-} 
+  width: 100%;
+  height: auto;
+  margin-inline: auto;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-items: stretch;
+}
 
 .card {
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: rgb(248, 247, 247);
-    
+  width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  background-color: transparent;
+  padding: 1rem;
 }
 
 .card figure {
-    margin: 0;
-    height: 350px;
-    
+  margin: 0;
+  height: 350px;
+  width: 350px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: rgb(248, 247, 247);
 }
 
 .card figure img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block; 
-    object-position: center top;
-}
-
-.card h4, .card p {
-    padding: 0.5rem 1rem;
+  width: 100%;
+  height: 90%;
+  object-fit: contain;
+  display: block;
+  object-position: center;
 }
 
 .card p {
-    padding: 1rem 1rem 1rem 1rem;
-    margin: 0;
-    color: rgb(100, 100, 100);
+  padding: 1rem 0 0.2rem 0;
+  margin: 0;
+  color: rgb(37, 37, 37);
+  font-weight: 500;
+  font-size: small;
+  text-align: left;
+}
+
+.card h4 {
+  padding: 1rem 0 0.2rem 0;
+  margin: 0;
+  color: #9b9b9b;
+  font-weight: 400;
+  font-size: medium;
+  text-align: left;
 }
 
 .popular-section .card {
+  background-color: transparent;
+}
+
+.collections-section > h1,
+.popular-section > h1,
+.most-rated-section > h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0rem;
+  padding: 0rem 2rem;
+}
+
+.collections-section > p,
+.popular-section > p,
+.most-rated-section > p {
+  color: rgb(100, 100, 100);
+  padding: 0rem 2rem;
+  margin-top: 0rem;
+  font-size: large;
+}
+
+.popular-section .card {
+  width: calc(33.33% - 2rem);
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    background-color: transparent;
+}
+
+.popular-section .card figure {
+    margin: 0;
+    height: 500px;  
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
     background-color: rgb(248, 247, 247);
 }
 
-
-.collections-section h1,
-.popular-section h1
-{
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 0rem;
-    font-weight: 400;
-    padding: 0rem 2rem;
+.popular-section .card figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    object-position: center top;
 }
 
-.collections-section p,
-.popular-section p
-{
-    color: rgb(100, 100, 100);
-    padding: 0rem 2rem;
-    margin-top: 0rem;
-    font-size: large;
-}
 
-.collections-section
-{
-    padding: 3rem 4rem;
+.collections-section {
+  padding: 3rem 4rem;
 }
-
 
 .popular-section {
-    padding: 3rem 4rem;
+  padding: 3rem 4rem;
 }
 
+.most-rated-section {
+  padding: 3rem 4rem;
+  text-align: center;
+}
+
+button {
+  background-color: rgb(30, 30, 28);
+  color: rgb(248, 247, 247);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: medium;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 6px;
+
+
+}
+
+button:hover,
+button:focus {
+  background-color: rgb(252, 78, 148);
+}
+
+.popular-section button {
+  color: rgb(248, 247, 247);
+}
 
 .cta-section {
-    background-color:  rgb(248, 247, 247);
-    position: relative;
-    height: 80vh;
+  background-color: rgb(248, 247, 247);
+  position: relative;
+  height: 80vh;
 }
 
 .cta-section img {
-    width: 50%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    display: block;
-    
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 .cta-content {
-    position: absolute;
-    top: 50%;
-    left: 72%;
-    transform: translate(-50%, -50%);
-    color: rgb(20, 12, 1);
-    white-space: nowrap;
-    text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 72%;
+  transform: translate(-50%, -50%);
+  color: rgb(20, 12, 1);
+  white-space: nowrap;
+  text-align: center;
 }
 
 .cta-content p {
-    font-size: 0.85rem;
-    letter-spacing: 4px;
-    text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }
 
 .cta-content h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin: 0.5rem 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-
-
-
-
-
 .footer-content h3 {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    text-transform: uppercase;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
 }
 
 .footer-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    background-color: rgb(240, 240, 240);
-    padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  background-color: rgb(240, 240, 240);
+  padding: 2rem;
 }
 
 .footer-content ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-weight: 400;
-    font-size: large;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  font-size: large;
 }
 
 .footer-content li {
-    margin-bottom: 0.6rem;
+  margin-bottom: 0.6rem;
 }
 
 .footer-content ul li a {
-    text-decoration: none;
-    color: rgb(10, 0, 0);
+  text-decoration: none;
+  color: rgb(10, 0, 0);
 }
 
 .footer-content a {
-    transition: color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .footer-content li a:hover,
 .footer-content li a:focus {
-    text-decoration: underline;
-    color: rgb(230, 2, 139);
+  text-decoration: underline;
+  color: rgb(230, 2, 139);
 }
 
 .footer-content p {
-    letter-spacing: 2px;
+  letter-spacing: 2px;
 
-    font-weight: 500;
-    font-size: medium;
+  font-weight: 500;
+  font-size: medium;
 }
 
 .footer-image img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    object-position: center;
-    display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
