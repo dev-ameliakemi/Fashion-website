@@ -97,7 +97,7 @@ li a:focus {
 
 .card {
   width: 300px;
-  height: auto;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   overflow: visible;
@@ -116,10 +116,10 @@ li a:focus {
 
 .card figure img {
   width: 100%;
-  height: 90%;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  object-position: center;
+  object-position: top;
 }
 
 .card p {
@@ -140,17 +140,13 @@ li a:focus {
   text-align: left;
 }
 
-.popular-section .card {
-  background-color: transparent;
-}
-
 .collections-section > h1,
 .popular-section > h1,
 .most-rated-section > h1 {
-text-transform: uppercase;
-letter-spacing: 2px;
-margin-bottom: 0rem;
-padding: 0rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0rem;
+  padding: 0rem 2rem;
 }
 
 .collections-section > p,
@@ -162,31 +158,63 @@ padding: 0rem 2rem;
   font-size: large;
 }
 
+.popular-section .container {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+  height: auto;
+}
+
 .popular-section .card {
-  width: calc(33.33% - 2rem);
-    display: flex;
-    flex-direction: column;
-    overflow: visible;
-    background-color: transparent;
+  position: relative;
+  display: block;
+  background-color: transparent;
+  border-radius: 8px;
+  overflow: hidden;
+  width: auto;
+  flex: 1 1 0;
+}
+
+.popular-section .card:first-child {
+  flex: 2 1 0;
+}
+
+.popular-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.popular-right .card {
+  flex: 1;
 }
 
 .popular-section .card figure {
-    margin: 0;
-    height: 500px;  
-    width: 100%;
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: rgb(248, 247, 247);
+  margin: 0;
+  min-height: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgb(248, 247, 247);
 }
 
 .popular-section .card figure img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    object-position: center top;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  object-position: top;
 }
 
+
+.popular-section {
+  margin-bottom: 2rem;
+}
+
+.cta-section {
+  margin-top: 1rem;
+}
 
 .collections-section {
   padding: 3rem 4rem;
@@ -210,8 +238,6 @@ button {
   font-weight: 500;
   cursor: pointer;
   border-radius: 2px;
-
-
 }
 
 button:hover,
@@ -219,15 +245,26 @@ button:focus {
   background-color: rgb(50, 50, 50);
 }
 
+
 .popular-section button {
-  background-color:  rgb(255, 255, 255);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
   color: rgb(30, 30, 28);
-  font-size: medium;
+  font-size: small;
+  width: auto;
+  margin: 0;
+  padding: 0.8rem 2rem;
+  border-radius: 2px;
+  font-weight: 500;
+  border: none;
 }
 
 .popular-section button:hover,
 .popular-section button:focus {
-  background-color:  rgb(30, 30, 28);
+  background-color: rgb(30, 30, 28);
   color: rgb(248, 247, 247);
 }
 
@@ -258,7 +295,6 @@ button:focus {
   font-size: 12px;
   letter-spacing: 1px;
   text-transform: uppercase;
-
 }
 
 .cta-content h1 {
@@ -276,7 +312,6 @@ button:focus {
   font-size: 12px;
   letter-spacing: 2px;
 }
-
 
 .footer-content {
   display: grid;
@@ -310,7 +345,7 @@ button:focus {
 .footer-content li a:hover,
 .footer-content li a:focus {
   text-decoration: none;
-  color: #ff3059
+  color: #ff3059;
 }
 
 .footer-content p {
@@ -319,7 +354,6 @@ button:focus {
   font-size: medium;
   color: #ff3059;
   text-transform: capitalize;
- 
 }
 
 .footer-contact > p,
@@ -329,7 +363,6 @@ button:focus {
   font-size: small;
   color: rgb(100, 100, 100);
 }
-
 
 .footer-image img {
   width: 70%;
